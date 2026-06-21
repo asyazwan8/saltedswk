@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import menuData from '../data/menu-seed.json';
+import menuData from '../data/menu-seed.json' with { type: 'json' };
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,

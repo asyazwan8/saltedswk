@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -17,7 +16,7 @@ export default function AdminLoginPage() {
     const res = await fetch('/api/auth', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'login', email, password }),
+      body: JSON.stringify({ action: 'login', password }),
     });
     setLoading(false);
     if (res.ok) {
@@ -25,7 +24,7 @@ export default function AdminLoginPage() {
       router.refresh();
     } else {
       const data = await res.json();
-      setError(data.error || 'Login failed.');
+      setError(data.error || 'Incorrect password.');
     }
   }
 
@@ -43,20 +42,6 @@ export default function AdminLoginPage() {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block font-semibold text-[15px] mb-1">
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
-              placeholder="admin@salted.com"
-            />
-          </div>
-          <div>
             <label htmlFor="password" className="block font-semibold text-[15px] mb-1">
               Password
             </label>
@@ -64,6 +49,7 @@ export default function AdminLoginPage() {
               id="password"
               type="password"
               required
+              autoFocus
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
