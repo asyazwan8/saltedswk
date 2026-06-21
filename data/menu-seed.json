@@ -1,0 +1,178 @@
+{
+  "categories": [
+    { "name": "Noodle Dishes", "slug": "noodles", "order": 1 },
+    { "name": "Rice & Mains", "slug": "mains", "order": 2 },
+    { "name": "Drinks", "slug": "drinks", "order": 3 },
+    { "name": "Desserts", "slug": "desserts", "order": 4 }
+  ],
+  "menuItems": [
+    {
+      "category": "noodles",
+      "name": "Sarawak Laksa",
+      "description": "Our signature creamy laksa broth with sambal belacan, coconut milk, egg, and chicken. A true taste of Sarawak.",
+      "basePrice": 12.00,
+      "imageUrl": "/menu/sarawak-laksa.jpg",
+      "featured": true,
+      "variants": [
+        { "name": "Basic (Egg & Chicken)", "priceAdd": 0 },
+        { "name": "Original (+ Prawns)", "priceAdd": 4.00 },
+        { "name": "Special (+ Large Prawns & Cuttlefish)", "priceAdd": 10.00 }
+      ]
+    },
+    {
+      "category": "noodles",
+      "name": "Mee Kolok (Kolo Mee)",
+      "description": "Springy egg noodles tossed in shallot oil, served with soup on the side. Choose your topping.",
+      "basePrice": 11.50,
+      "imageUrl": "/menu/kolo-mee.jpg",
+      "featured": true,
+      "variants": [
+        { "name": "Chicken", "priceAdd": 0 },
+        { "name": "Beef (Daging)", "priceAdd": 0 },
+        { "name": "Seafood", "priceAdd": 3.00 },
+        { "name": "Smoked Duck", "priceAdd": 3.00 },
+        { "name": "Lamb (Weekend only)", "priceAdd": 3.00 }
+      ]
+    },
+    {
+      "category": "noodles",
+      "name": "Vegetarian Kolo Mee",
+      "description": "Kolo Mee served with fresh vegetables — perfect for vegetarians.",
+      "basePrice": 9.00,
+      "imageUrl": "/menu/vegetarian-kolo-mee.jpg",
+      "featured": false,
+      "variants": []
+    },
+    {
+      "category": "noodles",
+      "name": "Kolo Kueh Tiaw",
+      "description": "Flat rice noodles (kueh tiaw) tossed kolo-style with shallot oil and your choice of topping.",
+      "basePrice": 11.50,
+      "imageUrl": "/menu/kolo-kueh-tiaw.jpg",
+      "featured": false,
+      "variants": [
+        { "name": "Chicken", "priceAdd": 0 },
+        { "name": "Beef", "priceAdd": 0 }
+      ]
+    },
+    {
+      "category": "noodles",
+      "name": "Beehoon Belacan",
+      "description": "Vermicelli noodles stir-fried with pungent sambal belacan. Available with or without telur padi (century egg).",
+      "basePrice": 9.00,
+      "imageUrl": "/menu/beehoon-belacan.jpg",
+      "featured": false,
+      "variants": [
+        { "name": "Normal", "priceAdd": 0 },
+        { "name": "With Telur Padi (Century Egg)", "priceAdd": 2.00 }
+      ]
+    },
+    {
+      "category": "noodles",
+      "name": "Mee Jawa Sarawak",
+      "description": "Yellow noodles in a thick, rich gravy made from sweet potato and beef stock, topped with tofu puffs, half egg, and fried shallots.",
+      "basePrice": 10.00,
+      "imageUrl": null,
+      "featured": false,
+      "variants": [
+        { "name": "Beef", "priceAdd": 0 },
+        { "name": "Chicken", "priceAdd": 0 }
+      ]
+    },
+    {
+      "category": "noodles",
+      "name": "Tomato Crispy Mee",
+      "description": "Crispy noodles in a rich tomato seafood gravy, topped with prawns and squid. A popular Sarawak favourite.",
+      "basePrice": 14.00,
+      "imageUrl": "/menu/crispy-tomato-mee.jpg",
+      "featured": false,
+      "variants": []
+    },
+    {
+      "category": "mains",
+      "name": "Kacangma",
+      "description": "Traditional Hakka chicken dish cooked with ginger and motherwort herb. Earthy, aromatic, and best enjoyed with white rice.",
+      "basePrice": 16.00,
+      "imageUrl": null,
+      "featured": false,
+      "variants": []
+    },
+    {
+      "category": "mains",
+      "name": "Teochew Oyster Omelette",
+      "description": "Classic Teochew-style oyster omelette — crispy edges, eggy centre, fresh oysters.",
+      "basePrice": 14.00,
+      "imageUrl": null,
+      "featured": false,
+      "variants": []
+    },
+    {
+      "category": "drinks",
+      "name": "Teh C Peng Special (Gula Apong)",
+      "description": "SALTed's signature three-layer iced tea with evaporated milk and Sarawak palm sugar (Gula Apong). Refreshing and unique.",
+      "basePrice": 7.00,
+      "imageUrl": "/menu/teh-c-peng-special.jpg",
+      "featured": true,
+      "variants": []
+    },
+    {
+      "category": "drinks",
+      "name": "Iced Valentine",
+      "description": "A bubbly, sweet Ribena-based iced drink. Refreshing and fun.",
+      "basePrice": 6.00,
+      "imageUrl": null,
+      "featured": false,
+      "variants": []
+    },
+    {
+      "category": "drinks",
+      "name": "Kopi / Teh",
+      "description": "Local Malaysian coffee or tea, served hot or iced.",
+      "basePrice": 3.50,
+      "imageUrl": null,
+      "featured": false,
+      "variants": [
+        { "name": "Kopi O (Hot)", "priceAdd": 0 },
+        { "name": "Kopi C (Hot)", "priceAdd": 0 },
+        { "name": "Teh Tarik (Hot)", "priceAdd": 0 },
+        { "name": "Teh O Ais", "priceAdd": 0.50 },
+        { "name": "Kopi O Ais", "priceAdd": 0.50 }
+      ]
+    },
+    {
+      "category": "drinks",
+      "name": "Air Mineral / Sirap",
+      "description": "Mineral water or sweet rose syrup drink.",
+      "basePrice": 2.00,
+      "imageUrl": null,
+      "featured": false,
+      "variants": [
+        { "name": "Air Mineral", "priceAdd": 0 },
+        { "name": "Sirap Ais", "priceAdd": 1.00 }
+      ]
+    },
+    {
+      "category": "desserts",
+      "name": "Fruit Cocktail Pudding",
+      "description": "Light and refreshing fruit cocktail jelly pudding — a sweet ending to your meal.",
+      "basePrice": 5.00,
+      "imageUrl": "/menu/fruit-cocktail-pudding.jpg",
+      "featured": false,
+      "variants": []
+    }
+  ],
+  "settings": [
+    { "key": "whatsapp_number", "value": "60374935266" },
+    { "key": "restaurant_name", "value": "SALTed" },
+    { "key": "tagline", "value": "Sarawak's Authentic Local Taste, Extra Delicious" },
+    { "key": "address", "value": "30-1, Jalan PJU 7/16A, Mutiara Damansara, 47810 Petaling Jaya, Selangor" },
+    { "key": "phone", "value": "+60 3-7493 5266" },
+    { "key": "email", "value": "SALTedswk@gmail.com" },
+    { "key": "instagram", "value": "https://www.instagram.com/saltedswk/" },
+    { "key": "facebook", "value": "https://www.facebook.com/SALTedSwk/" },
+    { "key": "operating_hours", "value": "Tuesday – Friday: 12:00 PM – 6:00 PM | Saturday – Sunday: 10:00 AM – 6:00 PM | Closed Mondays" },
+    { "key": "pickup_open_time", "value": "10:00" },
+    { "key": "pickup_close_time", "value": "14:00" },
+    { "key": "closed_days", "value": "1" }
+  ]
+}
