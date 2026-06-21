@@ -26,8 +26,8 @@ export default function MenuCategoryTabs({ categories, activeSlug, onChange }: P
               className={`flex-shrink-0 px-4 min-h-[44px] rounded-lg text-[16px] font-medium transition-colors whitespace-nowrap
                 ${
                   activeSlug === cat.slug
-                    ? 'text-[#EA580C] border-b-2 border-[#EA580C] font-bold rounded-b-none bg-orange-50'
-                    : 'text-[#555555] hover:text-[#EA580C] hover:bg-orange-50'
+                    ? 'text-[#1A1A1A] border-b-2 border-[#1A1A1A] font-bold rounded-b-none bg-neutral-100'
+                    : 'text-[#555555] hover:text-[#1A1A1A] hover:bg-neutral-100'
                 }`}
             >
               {cat.name}

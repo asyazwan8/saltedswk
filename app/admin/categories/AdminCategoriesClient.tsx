@@ -69,11 +69,11 @@ export default function AdminCategoriesClient({ categories: initial }: { categor
           onChange={(e) => setNewName(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && addCategory()}
           placeholder="New category name"
-          className="flex-1 border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
+          className="flex-1 border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#1A1A1A] min-h-[52px]"
         />
         <button
           onClick={addCategory}
-          className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold px-5 min-h-[52px] rounded-xl"
+          className="bg-[#1A1A1A] hover:bg-[#000000] text-white font-bold px-5 min-h-[52px] rounded-xl"
         >
           Add
         </button>
@@ -89,7 +89,7 @@ export default function AdminCategoriesClient({ categories: initial }: { categor
                   type="text"
                   value={editName}
                   onChange={(e) => setEditName(e.target.value)}
-                  className="flex-1 border border-[#E5E5E5] rounded-lg px-3 py-2 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[44px]"
+                  className="flex-1 border border-[#E5E5E5] rounded-lg px-3 py-2 text-[16px] focus:outline-none focus:border-[#1A1A1A] min-h-[44px]"
                   autoFocus
                 />
                 <button

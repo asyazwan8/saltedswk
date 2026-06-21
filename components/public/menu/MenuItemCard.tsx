@@ -10,7 +10,7 @@ function Initials({ name }: { name: string }) {
   const words = name.trim().split(/\s+/);
   const initials = words.slice(0, 2).map((w) => w[0].toUpperCase()).join('');
   return (
-    <div className="w-full h-full bg-[#EA580C] flex items-center justify-center">
+    <div className="w-full h-full bg-[#1A1A1A] flex items-center justify-center">
       <span className="text-white text-3xl font-bold">{initials}</span>
     </div>
   );
@@ -58,7 +58,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
           <Initials name={item.name} />
         )}
         {item.featured && (
-          <span className="absolute top-2 left-2 bg-[#EA580C] text-white text-xs font-bold px-2 py-0.5 rounded-full">
+          <span className="absolute top-2 left-2 bg-[#1A1A1A] text-white text-xs font-bold px-2 py-0.5 rounded-full">
             ★ Popular
           </span>
         )}
@@ -67,8 +67,8 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
       {/* Content */}
       <div className="p-4 flex flex-col gap-3 flex-1">
         <div className="flex justify-between items-start gap-2">
-          <h3 className="text-[18px] font-semibold leading-snug">{item.name}</h3>
-          <span className="text-[18px] font-bold text-[#EA580C] whitespace-nowrap">
+          <h3 className="font-serif text-[19px] font-medium leading-snug">{item.name}</h3>
+          <span className="text-[17px] font-semibold text-[#9A2A2A] whitespace-nowrap">
             RM {price.toFixed(2)}
           </span>
         </div>
@@ -89,7 +89,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
               id={`variant-${item.id}`}
               value={selectedVariantIdx}
               onChange={(e) => setSelectedVariantIdx(Number(e.target.value))}
-              className="w-full border border-[#E5E5E5] rounded-xl px-3 py-2 text-[16px] focus:outline-none focus:border-[#EA580C] bg-white min-h-[44px]"
+              className="w-full border border-[#E5E5E5] rounded-xl px-3 py-2 text-[16px] focus:outline-none focus:border-[#1A1A1A] bg-white min-h-[44px]"
             >
               {variants.map((v, idx) => (
                 <option key={v.id} value={idx}>
@@ -125,7 +125,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
             className={`flex-1 flex items-center justify-center gap-2 min-h-[44px] rounded-xl text-[16px] font-bold transition-colors ${
               added
                 ? 'bg-green-600 text-white'
-                : 'bg-[#EA580C] hover:bg-[#C2410C] text-white'
+                : 'bg-[#1A1A1A] hover:bg-[#000000] text-white'
             }`}
           >
             {added ? (

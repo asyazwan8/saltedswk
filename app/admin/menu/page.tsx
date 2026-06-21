@@ -19,7 +19,7 @@ export default async function AdminMenuPage() {
         <h1 className="text-[28px] font-extrabold">Menu Items</h1>
         <Link
           href="/admin/menu/new"
-          className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-[15px] px-5 min-h-[44px] rounded-xl inline-flex items-center"
+          className="bg-[#1A1A1A] hover:bg-[#000000] text-white font-bold text-[15px] px-5 min-h-[44px] rounded-xl inline-flex items-center"
         >
           + Add Item
         </Link>
@@ -51,7 +51,7 @@ export default async function AdminMenuPage() {
                           className="object-cover w-full h-full"
                         />
                       ) : (
-                        <span className="text-[#EA580C] text-xs font-bold">
+                        <span className="text-[#1A1A1A] text-xs font-bold">
                           {item.name.split(' ').slice(0, 2).map((w) => w[0]).join('')}
                         </span>
                       )}
@@ -62,7 +62,7 @@ export default async function AdminMenuPage() {
                 <td className="px-4 py-3 text-[#555555] hidden sm:table-cell">
                   {item.category?.name ?? '—'}
                 </td>
-                <td className="px-4 py-3 font-semibold text-[#EA580C]">
+                <td className="px-4 py-3 font-semibold text-[#1A1A1A]">
                   RM {Number(item.base_price).toFixed(2)}
                 </td>
                 <td className="px-4 py-3 hidden md:table-cell">
@@ -83,7 +83,7 @@ export default async function AdminMenuPage() {
               <tr>
                 <td colSpan={5} className="px-4 py-10 text-center text-[#555555]">
                   No menu items yet.{' '}
-                  <Link href="/admin/menu/new" className="text-[#EA580C] font-medium underline">
+                  <Link href="/admin/menu/new" className="text-[#1A1A1A] font-medium underline">
                     Add one
                   </Link>
                 </td>

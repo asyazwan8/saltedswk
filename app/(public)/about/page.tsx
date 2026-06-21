@@ -61,7 +61,7 @@ export default function AboutPage() {
         {/* Location */}
         <section>
           <h2 className="text-[22px] font-bold mb-4 flex items-center gap-2">
-            <MapPin className="text-[#EA580C]" size={22} /> Location
+            <MapPin className="text-[#1A1A1A]" size={22} /> Location
           </h2>
           <address className="not-italic text-[16px] text-[#555555] leading-relaxed mb-4">
             {RESTAURANT.address.split(', ').map((line, i) => (
@@ -73,7 +73,7 @@ export default function AboutPage() {
               href={`https://maps.google.com/?q=${encodeURIComponent(RESTAURANT.address)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-[16px] px-6 min-h-[52px] rounded-xl"
+              className="inline-flex items-center gap-2 bg-[#1A1A1A] hover:bg-[#000000] text-white font-bold text-[16px] px-6 min-h-[52px] rounded-xl"
             >
               <MapPin size={18} /> Open in Google Maps
             </a>
@@ -83,7 +83,7 @@ export default function AboutPage() {
         {/* Hours */}
         <section>
           <h2 className="text-[22px] font-bold mb-4 flex items-center gap-2">
-            <Clock className="text-[#EA580C]" size={22} /> Opening Hours
+            <Clock className="text-[#1A1A1A]" size={22} /> Opening Hours
           </h2>
           <table className="text-[16px] border-collapse w-full max-w-sm">
             <tbody>
@@ -98,7 +98,7 @@ export default function AboutPage() {
               ].map(([day, hours]) => (
                 <tr key={day} className="border-b border-[#E5E5E5]">
                   <td className="py-2 pr-8 font-medium text-[#111111]">{day}</td>
-                  <td className={`py-2 ${hours === 'CLOSED' ? 'text-[#EA580C] font-semibold' : 'text-[#555555]'}`}>
+                  <td className={`py-2 ${hours === 'CLOSED' ? 'text-[#1A1A1A] font-semibold' : 'text-[#555555]'}`}>
                     {hours}
                   </td>
                 </tr>
@@ -114,18 +114,18 @@ export default function AboutPage() {
             <li>
               <a
                 href={`tel:${RESTAURANT.phone}`}
-                className="flex items-center gap-3 text-[#555555] hover:text-[#EA580C] min-h-[52px]"
+                className="flex items-center gap-3 text-[#555555] hover:text-[#1A1A1A] min-h-[52px]"
               >
-                <Phone size={18} className="text-[#EA580C] shrink-0" />
+                <Phone size={18} className="text-[#1A1A1A] shrink-0" />
                 {RESTAURANT.phone}
               </a>
             </li>
             <li>
               <a
                 href={`mailto:${RESTAURANT.email}`}
-                className="flex items-center gap-3 text-[#555555] hover:text-[#EA580C] min-h-[52px]"
+                className="flex items-center gap-3 text-[#555555] hover:text-[#1A1A1A] min-h-[52px]"
               >
-                <Mail size={18} className="text-[#EA580C] shrink-0" />
+                <Mail size={18} className="text-[#1A1A1A] shrink-0" />
                 {RESTAURANT.email}
               </a>
             </li>
@@ -141,9 +141,9 @@ export default function AboutPage() {
                 href={RESTAURANT.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#555555] hover:text-[#EA580C] min-h-[52px]"
+                className="flex items-center gap-3 text-[#555555] hover:text-[#1A1A1A] min-h-[52px]"
               >
-                <span className="text-[#EA580C]"><InstagramIcon size={20} /></span>
+                <span className="text-[#1A1A1A]"><InstagramIcon size={20} /></span>
                 {RESTAURANT.handle} on Instagram
               </a>
             </li>
@@ -152,9 +152,9 @@ export default function AboutPage() {
                 href={RESTAURANT.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#555555] hover:text-[#EA580C] min-h-[52px]"
+                className="flex items-center gap-3 text-[#555555] hover:text-[#1A1A1A] min-h-[52px]"
               >
-                <span className="text-[#EA580C]"><FacebookIcon size={20} /></span>
+                <span className="text-[#1A1A1A]"><FacebookIcon size={20} /></span>
                 SALTed on Facebook
               </a>
             </li>

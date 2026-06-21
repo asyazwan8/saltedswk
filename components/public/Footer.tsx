@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-4 py-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-          <div className="text-2xl font-bold text-[#EA580C] mb-2">SALTed</div>
+          <div className="font-serif text-2xl mb-2 text-white">SALTed<span className="text-[#9A2A2A]">.</span></div>
           <p className="text-sm text-gray-400 mb-4">{RESTAURANT.tagline}</p>
           <HalalBadge size="sm" />
         </div>
@@ -65,7 +65,7 @@ export default function Footer() {
               href={RESTAURANT.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-10 h-10 bg-white/10 rounded-full hover:bg-[#EA580C] transition-colors"
+              className="inline-flex items-center justify-center w-10 h-10 bg-white/10 rounded-full hover:bg-[#1A1A1A] transition-colors"
               aria-label="Instagram"
             >
               <InstagramIcon size={18} />
@@ -74,7 +74,7 @@ export default function Footer() {
               href={RESTAURANT.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-10 h-10 bg-white/10 rounded-full hover:bg-[#EA580C] transition-colors"
+              className="inline-flex items-center justify-center w-10 h-10 bg-white/10 rounded-full hover:bg-[#1A1A1A] transition-colors"
               aria-label="Facebook"
             >
               <FacebookIcon size={18} />

@@ -7,8 +7,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Sidebar */}
       <aside className="w-56 bg-[#111111] text-white flex flex-col shrink-0 min-h-screen">
         <div className="px-5 py-5 border-b border-white/10">
-          <Link href="/admin" className="text-xl font-bold text-[#EA580C]">
-            SALTed Admin
+          <Link href="/admin" className="font-serif text-xl text-white">
+            SALTed<span className="text-[#9A2A2A]">.</span> Admin
           </Link>
         </div>
         <nav className="flex-1 px-3 py-4 space-y-1">
