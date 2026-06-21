@@ -14,7 +14,7 @@ export default function Logo({ size = 40, className = '' }: Props) {
   if (failed) {
     return (
       <span
-        className={`inline-flex items-center justify-center rounded-full bg-[#CC0000] text-white font-extrabold shadow-md ${className}`}
+        className={`inline-flex items-center justify-center rounded-full bg-[#EA580C] text-white font-extrabold shadow-md ${className}`}
         style={{ width: size, height: size, fontSize: size * 0.32 }}
         aria-label="SALTed logo"
       >

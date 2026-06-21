@@ -64,7 +64,7 @@ export default function ImageUpload({ value, onChange }: Props) {
         <div
           onDrop={handleDrop}
           onDragOver={(e) => e.preventDefault()}
-          className="border-2 border-dashed border-[#E5E5E5] rounded-xl p-8 flex flex-col items-center gap-3 cursor-pointer hover:border-[#CC0000] transition-colors"
+          className="border-2 border-dashed border-[#E5E5E5] rounded-xl p-8 flex flex-col items-center gap-3 cursor-pointer hover:border-[#EA580C] transition-colors"
           onClick={() => inputRef.current?.click()}
           role="button"
           tabIndex={0}

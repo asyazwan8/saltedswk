@@ -79,7 +79,7 @@ export default function AdminSettingsClient({ settings: initial }: Props) {
             type={type}
             value={fields[key] ?? ''}
             onChange={(e) => handleChange(key, e.target.value)}
-            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
           />
           {hint && <p className="text-sm text-[#555555] mt-1">{hint}</p>}
         </div>
@@ -96,8 +96,8 @@ export default function AdminSettingsClient({ settings: initial }: Props) {
               onClick={() => toggleDay(idx)}
               className={`px-4 min-h-[44px] rounded-xl text-[15px] font-medium border transition-colors ${
                 closedDays.includes(idx)
-                  ? 'bg-[#CC0000] text-white border-[#CC0000]'
-                  : 'border-[#E5E5E5] text-[#555555] hover:border-[#CC0000]'
+                  ? 'bg-[#EA580C] text-white border-[#EA580C]'
+                  : 'border-[#E5E5E5] text-[#555555] hover:border-[#EA580C]'
               }`}
             >
               {day}
@@ -112,7 +112,7 @@ export default function AdminSettingsClient({ settings: initial }: Props) {
         className={`px-8 min-h-[52px] rounded-xl font-bold text-[16px] transition-colors ${
           saved
             ? 'bg-green-600 text-white'
-            : 'bg-[#CC0000] hover:bg-[#990000] text-white'
+            : 'bg-[#EA580C] hover:bg-[#C2410C] text-white'
         } disabled:opacity-60`}
       >
         {saved ? '✓ Saved!' : saving ? 'Saving…' : 'Save Settings'}

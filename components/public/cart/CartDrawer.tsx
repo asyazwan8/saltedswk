@@ -108,7 +108,7 @@ export default function CartDrawer({ open, onClose }: Props) {
                         <p className="text-sm text-[#555555]">{item.variantName}</p>
                       )}
                     </div>
-                    <p className="text-[16px] font-bold text-[#CC0000] whitespace-nowrap">
+                    <p className="text-[16px] font-bold text-[#EA580C] whitespace-nowrap">
                       RM {(item.unitPrice * item.quantity).toFixed(2)}
                     </p>
                   </div>
@@ -150,7 +150,7 @@ export default function CartDrawer({ open, onClose }: Props) {
                       value={item.note}
                       onChange={(e) => updateNote(item.id, e.target.value)}
                       placeholder="e.g. Extra sambal please"
-                      className="w-full border border-[#E5E5E5] rounded-lg px-3 py-2 text-[16px] focus:outline-none focus:border-[#CC0000]"
+                      className="w-full border border-[#E5E5E5] rounded-lg px-3 py-2 text-[16px] focus:outline-none focus:border-[#EA580C]"
                     />
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function CartDrawer({ open, onClose }: Props) {
               {/* Total */}
               <div className="flex justify-between items-center py-3 border-t border-[#E5E5E5]">
                 <span className="text-[16px] font-semibold">Estimated Total</span>
-                <span className="text-[18px] font-bold text-[#CC0000]">RM {total.toFixed(2)}</span>
+                <span className="text-[18px] font-bold text-[#EA580C]">RM {total.toFixed(2)}</span>
               </div>
 
               {/* Pickup date */}
@@ -178,7 +178,7 @@ export default function CartDrawer({ open, onClose }: Props) {
                   id="pickup-time"
                   value={pickupTime}
                   onChange={(e) => setPickupTime(e.target.value)}
-                  className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+                  className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
                 >
                   <option value="">Choose a time</option>
                   {PICKUP_SLOTS.map((slot) => {
@@ -207,7 +207,7 @@ export default function CartDrawer({ open, onClose }: Props) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
-                  className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+                  className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
                 />
                 {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
               </div>
@@ -223,14 +223,14 @@ export default function CartDrawer({ open, onClose }: Props) {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="012-345 6789"
-                  className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+                  className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
                 />
               </div>
 
               {/* Send button */}
               <button
                 onClick={handleSend}
-                className="w-full bg-[#CC0000] hover:bg-[#990000] text-white font-bold text-[18px] min-h-[56px] rounded-xl transition-colors"
+                className="w-full bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-[18px] min-h-[56px] rounded-xl transition-colors"
               >
                 Send Order via WhatsApp
               </button>
@@ -257,7 +257,7 @@ export default function CartDrawer({ open, onClose }: Props) {
               </button>
               <button
                 onClick={confirmSend}
-                className="flex-1 bg-[#CC0000] hover:bg-[#990000] text-white rounded-xl min-h-[52px] text-[16px] font-bold"
+                className="flex-1 bg-[#EA580C] hover:bg-[#C2410C] text-white rounded-xl min-h-[52px] text-[16px] font-bold"
               >
                 Open WhatsApp
               </button>

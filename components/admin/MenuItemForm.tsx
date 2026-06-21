@@ -99,14 +99,14 @@ export default function MenuItemForm({ categories, item }: Props) {
       {/* Name */}
       <div>
         <label htmlFor="item-name" className="block font-semibold text-[15px] mb-1">
-          Name <span className="text-[#CC0000]">*</span>
+          Name <span className="text-[#EA580C]">*</span>
         </label>
         <input
           id="item-name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+          className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
         />
         {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
       </div>
@@ -114,13 +114,13 @@ export default function MenuItemForm({ categories, item }: Props) {
       {/* Category */}
       <div>
         <label htmlFor="item-category" className="block font-semibold text-[15px] mb-1">
-          Category <span className="text-[#CC0000]">*</span>
+          Category <span className="text-[#EA580C]">*</span>
         </label>
         <select
           id="item-category"
           value={categoryId}
           onChange={(e) => setCategoryId(e.target.value)}
-          className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px] bg-white"
+          className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px] bg-white"
         >
           {categories.map((c) => (
             <option key={c.id} value={c.id}>{c.name}</option>
@@ -132,7 +132,7 @@ export default function MenuItemForm({ categories, item }: Props) {
       {/* Base Price */}
       <div>
         <label htmlFor="item-price" className="block font-semibold text-[15px] mb-1">
-          Base Price (RM) <span className="text-[#CC0000]">*</span>
+          Base Price (RM) <span className="text-[#EA580C]">*</span>
         </label>
         <input
           id="item-price"
@@ -141,7 +141,7 @@ export default function MenuItemForm({ categories, item }: Props) {
           min="0"
           value={basePrice}
           onChange={(e) => setBasePrice(e.target.value)}
-          className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+          className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
         />
         {errors.basePrice && <p className="text-red-600 text-sm mt-1">{errors.basePrice}</p>}
       </div>
@@ -154,7 +154,7 @@ export default function MenuItemForm({ categories, item }: Props) {
           rows={3}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] resize-none"
+          className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] resize-none"
         />
       </div>
 
@@ -176,7 +176,7 @@ export default function MenuItemForm({ categories, item }: Props) {
               role="switch"
               aria-checked={value}
               onClick={() => set(!value)}
-              className={`w-11 h-6 rounded-full transition-colors ${value ? 'bg-[#CC0000]' : 'bg-gray-300'}`}
+              className={`w-11 h-6 rounded-full transition-colors ${value ? 'bg-[#EA580C]' : 'bg-gray-300'}`}
             >
               <span
                 className={`block w-5 h-5 rounded-full bg-white shadow transition-transform mx-0.5 ${value ? 'translate-x-5' : 'translate-x-0'}`}
@@ -194,7 +194,7 @@ export default function MenuItemForm({ categories, item }: Props) {
           <button
             type="button"
             onClick={addVariant}
-            className="flex items-center gap-1 text-[#CC0000] text-[15px] font-medium hover:underline min-h-[44px] px-2"
+            className="flex items-center gap-1 text-[#EA580C] text-[15px] font-medium hover:underline min-h-[44px] px-2"
           >
             <Plus size={16} /> Add Variant
           </button>
@@ -210,7 +210,7 @@ export default function MenuItemForm({ categories, item }: Props) {
                 value={v.name}
                 onChange={(e) => updateVariant(idx, 'name', e.target.value)}
                 placeholder="Variant name (e.g. Basic)"
-                className="flex-1 border border-[#E5E5E5] rounded-xl px-3 py-2 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[44px]"
+                className="flex-1 border border-[#E5E5E5] rounded-xl px-3 py-2 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[44px]"
               />
               <input
                 type="number"
@@ -219,7 +219,7 @@ export default function MenuItemForm({ categories, item }: Props) {
                 value={v.price_add}
                 onChange={(e) => updateVariant(idx, 'price_add', parseFloat(e.target.value) || 0)}
                 placeholder="+ Price"
-                className="w-28 border border-[#E5E5E5] rounded-xl px-3 py-2 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[44px]"
+                className="w-28 border border-[#E5E5E5] rounded-xl px-3 py-2 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[44px]"
               />
               <button
                 type="button"
@@ -238,13 +238,13 @@ export default function MenuItemForm({ categories, item }: Props) {
         <button
           type="submit"
           disabled={saving}
-          className="bg-[#CC0000] hover:bg-[#990000] text-white font-bold text-[16px] px-8 min-h-[52px] rounded-xl transition-colors disabled:opacity-60"
+          className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-[16px] px-8 min-h-[52px] rounded-xl transition-colors disabled:opacity-60"
         >
           {saving ? 'Saving…' : item ? 'Save Changes' : 'Add Item'}
         </button>
         <a
           href="/admin/menu"
-          className="border border-[#E5E5E5] hover:border-[#CC0000] text-[#111111] font-semibold text-[16px] px-6 min-h-[52px] rounded-xl inline-flex items-center"
+          className="border border-[#E5E5E5] hover:border-[#EA580C] text-[#111111] font-semibold text-[16px] px-6 min-h-[52px] rounded-xl inline-flex items-center"
         >
           Cancel
         </a>

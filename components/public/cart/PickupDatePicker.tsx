@@ -62,7 +62,7 @@ export default function PickupDatePicker({ value, onChange }: Props) {
       <button
         type="button"
         onClick={() => setShowCalendar(!showCalendar)}
-        className="w-full flex items-center justify-between border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] min-h-[52px] hover:border-[#CC0000] focus:outline-none focus:border-[#CC0000] bg-white"
+        className="w-full flex items-center justify-between border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] min-h-[52px] hover:border-[#EA580C] focus:outline-none focus:border-[#EA580C] bg-white"
         aria-haspopup="true"
         aria-expanded={showCalendar}
       >
@@ -117,8 +117,8 @@ export default function PickupDatePicker({ value, onChange }: Props) {
                   onClick={() => selectDate(date)}
                   disabled={blocked}
                   className={`h-9 w-full rounded-lg text-sm font-medium transition-colors
-                    ${selected ? 'bg-[#CC0000] text-white' : ''}
-                    ${!blocked && !selected ? 'hover:bg-red-50 hover:text-[#CC0000]' : ''}
+                    ${selected ? 'bg-[#EA580C] text-white' : ''}
+                    ${!blocked && !selected ? 'hover:bg-orange-50 hover:text-[#EA580C]' : ''}
                     ${blocked ? 'text-gray-300 cursor-not-allowed' : 'cursor-pointer'}
                   `}
                   aria-label={format(date, 'EEEE, d MMMM yyyy')}

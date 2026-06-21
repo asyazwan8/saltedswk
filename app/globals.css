@@ -2,8 +2,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-salted-red: #CC0000;
-  --color-salted-red-hover: #990000;
+  --color-salted-red: #EA580C;
+  --color-salted-red-hover: #C2410C;
   --color-salted-text: #111111;
   --color-salted-muted: #555555;
   --color-salted-border: #E5E5E5;
@@ -19,6 +19,6 @@ body {
 
 /* Global focus ring */
 *:focus-visible {
-  outline: 2px solid #CC0000;
+  outline: 2px solid #EA580C;
   outline-offset: 2px;
 }

@@ -52,13 +52,13 @@ export default function AdminLoginPage() {
               autoFocus
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+              className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#CC0000] hover:bg-[#990000] text-white font-bold text-[16px] min-h-[52px] rounded-xl transition-colors disabled:opacity-60"
+            className="w-full bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-[16px] min-h-[52px] rounded-xl transition-colors disabled:opacity-60"
           >
             {loading ? 'Signing in…' : 'Sign In'}
           </button>

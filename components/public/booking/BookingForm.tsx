@@ -48,7 +48,7 @@ export default function BookingForm() {
         {/* Date */}
         <div>
           <label className="block font-semibold text-[16px] mb-2">
-            Date <span className="text-[#CC0000]">*</span>
+            Date <span className="text-[#EA580C]">*</span>
           </label>
           <PickupDatePicker value={date} onChange={setDate} />
           {errors.date && <p className="text-red-600 text-sm mt-1">{errors.date}</p>}
@@ -57,13 +57,13 @@ export default function BookingForm() {
         {/* Time */}
         <div>
           <label htmlFor="booking-time" className="block font-semibold text-[16px] mb-2">
-            Time <span className="text-[#CC0000]">*</span>
+            Time <span className="text-[#EA580C]">*</span>
           </label>
           <select
             id="booking-time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
-            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px] bg-white"
+            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px] bg-white"
           >
             <option value="">Choose a time</option>
             {PICKUP_SLOTS.map((slot) => {
@@ -84,7 +84,7 @@ export default function BookingForm() {
         {/* Guests */}
         <div>
           <span className="block font-semibold text-[16px] mb-2">
-            Number of Guests <span className="text-[#CC0000]">*</span>
+            Number of Guests <span className="text-[#EA580C]">*</span>
           </span>
           <div className="flex items-center gap-4">
             <button
@@ -115,7 +115,7 @@ export default function BookingForm() {
         {/* Name */}
         <div>
           <label htmlFor="booking-name" className="block font-semibold text-[16px] mb-2">
-            Full Name <span className="text-[#CC0000]">*</span>
+            Full Name <span className="text-[#EA580C]">*</span>
           </label>
           <input
             id="booking-name"
@@ -123,7 +123,7 @@ export default function BookingForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Your full name"
-            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
           />
           {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
         </div>
@@ -131,7 +131,7 @@ export default function BookingForm() {
         {/* Phone */}
         <div>
           <label htmlFor="booking-phone" className="block font-semibold text-[16px] mb-2">
-            Phone Number <span className="text-[#CC0000]">*</span>
+            Phone Number <span className="text-[#EA580C]">*</span>
           </label>
           <input
             id="booking-phone"
@@ -139,7 +139,7 @@ export default function BookingForm() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="012-345 6789"
-            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] min-h-[52px]"
+            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] min-h-[52px]"
           />
           {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
         </div>
@@ -155,13 +155,13 @@ export default function BookingForm() {
             onChange={(e) => setSpecialRequests(e.target.value)}
             rows={3}
             placeholder="e.g. Please prepare a high chair"
-            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#CC0000] resize-none"
+            className="w-full border border-[#E5E5E5] rounded-xl px-4 py-3 text-[16px] focus:outline-none focus:border-[#EA580C] resize-none"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-[#CC0000] hover:bg-[#990000] text-white font-bold text-[18px] min-h-[56px] rounded-xl transition-colors"
+          className="w-full bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-[18px] min-h-[56px] rounded-xl transition-colors"
         >
           Reserve Table via WhatsApp
         </button>
@@ -187,7 +187,7 @@ export default function BookingForm() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setShowConfirm(false)}
-                className="flex-1 bg-[#CC0000] hover:bg-[#990000] text-white rounded-xl min-h-[52px] text-[16px] font-bold flex items-center justify-center"
+                className="flex-1 bg-[#EA580C] hover:bg-[#C2410C] text-white rounded-xl min-h-[52px] text-[16px] font-bold flex items-center justify-center"
               >
                 Open WhatsApp
               </a>

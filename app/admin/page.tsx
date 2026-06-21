@@ -39,7 +39,7 @@ export default async function AdminDashboardPage() {
           <Link
             key={s.label}
             href={s.href}
-            className="bg-white border border-[#E5E5E5] rounded-2xl p-5 hover:border-[#CC0000] hover:shadow-sm transition-all"
+            className="bg-white border border-[#E5E5E5] rounded-2xl p-5 hover:border-[#EA580C] hover:shadow-sm transition-all"
           >
             <p className="text-sm text-[#555555] mb-1">{s.label}</p>
             <p className="text-2xl font-bold text-[#111111]">{s.value}</p>
@@ -50,14 +50,14 @@ export default async function AdminDashboardPage() {
       <div className="flex gap-4 flex-wrap">
         <Link
           href="/admin/menu/new"
-          className="bg-[#CC0000] hover:bg-[#990000] text-white font-bold text-[16px] px-6 min-h-[52px] rounded-xl inline-flex items-center"
+          className="bg-[#EA580C] hover:bg-[#C2410C] text-white font-bold text-[16px] px-6 min-h-[52px] rounded-xl inline-flex items-center"
         >
           + Add Menu Item
         </Link>
         <Link
           href="/"
           target="_blank"
-          className="border border-[#E5E5E5] hover:border-[#CC0000] text-[#111111] font-semibold text-[16px] px-6 min-h-[52px] rounded-xl inline-flex items-center"
+          className="border border-[#E5E5E5] hover:border-[#EA580C] text-[#111111] font-semibold text-[16px] px-6 min-h-[52px] rounded-xl inline-flex items-center"
         >
           View Live Site ↗
         </Link>
