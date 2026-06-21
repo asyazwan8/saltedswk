@@ -20,6 +20,7 @@ const FIELDS = [
   { key: 'operating_hours', label: 'Operating Hours Text', type: 'text' },
   { key: 'pickup_open_time', label: 'Pickup Open Time', type: 'time' },
   { key: 'pickup_close_time', label: 'Pickup Close Time', type: 'time' },
+  { key: 'takeaway_note', label: 'Takeaway Note', type: 'text', hint: 'Shown on the order page. e.g. RM0.50 charge per takeaway container' },
 ];
 
 export default function AdminSettingsClient({ settings: initial }: Props) {

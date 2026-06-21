@@ -7,7 +7,7 @@ export const revalidate = 60;
 export default async function OrderPage() {
   const supabase = await createClient();
 
-  const [{ data: items }, { data: categories }] = await Promise.all([
+  const [{ data: items }, { data: categories }, { data: settingsRows }] = await Promise.all([
     supabase
       .from('menu_items')
       .select('*, variants(*), category:categories(*)')
@@ -17,12 +17,16 @@ export default async function OrderPage() {
       .from('categories')
       .select('*')
       .order('order', { ascending: true }),
+    supabase.from('settings').select('key, value').eq('key', 'takeaway_note'),
   ]);
+
+  const takeawayNote = settingsRows?.[0]?.value ?? '';
 
   return (
     <OrderClient
       items={(items as MenuItem[]) ?? []}
       categories={(categories as Category[]) ?? []}
+      takeawayNote={takeawayNote}
     />
   );
 }
