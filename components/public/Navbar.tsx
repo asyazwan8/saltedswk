@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const links = [
   { href: '/order', label: 'Order' },
@@ -21,16 +21,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 bg-white border-b-2 border-[#CC0000]">
       <nav className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 min-h-[52px]" aria-label="SALTed Home">
-          <Image
-            src="/brand/logo.png"
-            alt="SALTed logo"
-            width={40}
-            height={40}
-            className="rounded-full object-cover"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).style.display = 'none';
-            }}
-          />
+          <Logo size={40} />
           <span className="text-xl font-bold text-[#CC0000] tracking-tight">SALTed</span>
         </Link>
 
