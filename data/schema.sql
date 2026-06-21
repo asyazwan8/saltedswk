@@ -53,16 +53,16 @@ alter table variants    enable row level security;
 alter table settings    enable row level security;
 
 -- Public read access
-create policy if not exists "Public can read categories"
+create policy "Public can read categories"
   on categories for select using (true);
 
-create policy if not exists "Public can read menu_items"
+create policy "Public can read menu_items"
   on menu_items for select using (available = true);
 
-create policy if not exists "Public can read variants"
+create policy "Public can read variants"
   on variants for select using (true);
 
-create policy if not exists "Public can read settings"
+create policy "Public can read settings"
   on settings for select using (true);
 
 -- Admin writes use service-role key (bypasses RLS) — no extra policies needed
