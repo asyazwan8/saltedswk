@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -14,8 +15,18 @@ const links = [
 
 function Wordmark() {
   return (
-    <span className="font-serif text-2xl tracking-tight text-[#1A1A1A] leading-none">
-      SALTed<span className="text-[#9A2A2A]">.</span>
+    <span className="flex items-center gap-2.5">
+      <Image
+        src="/brand/restaurant.jpg"
+        alt="SALTed logo"
+        width={36}
+        height={36}
+        className="rounded-full object-cover border border-[#E2E2E2]"
+        priority
+      />
+      <span className="font-serif text-2xl tracking-tight text-[#1A1A1A] leading-none">
+        SALTed<span className="text-[#9A2A2A]">.</span>
+      </span>
     </span>
   );
 }

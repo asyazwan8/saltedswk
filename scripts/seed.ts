@@ -10,6 +10,11 @@ const supabase = createClient(
 async function seed() {
   console.log('🌱 Seeding SALTed database...\n');
 
+  // 0. Clean wipe (variants cascade from menu_items)
+  await supabase.from('menu_items').delete().gte('created_at', '1900-01-01');
+  await supabase.from('categories').delete().gte('created_at', '1900-01-01');
+  console.log('🧹 Cleared existing menu items & categories');
+
   // 1. Categories
   const { data: cats, error: catErr } = await supabase
     .from('categories')

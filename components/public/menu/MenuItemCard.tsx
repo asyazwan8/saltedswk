@@ -6,15 +6,7 @@ import { Plus, Minus, ShoppingCart } from 'lucide-react';
 import { MenuItem } from '@/lib/types';
 import { useCart } from '../cart/CartContext';
 
-function Initials({ name }: { name: string }) {
-  const words = name.trim().split(/\s+/);
-  const initials = words.slice(0, 2).map((w) => w[0].toUpperCase()).join('');
-  return (
-    <div className="w-full h-full bg-[#1A1A1A] flex items-center justify-center">
-      <span className="text-white text-3xl font-bold">{initials}</span>
-    </div>
-  );
-}
+const FALLBACK_IMAGE = '/brand/restaurant.jpg';
 
 export default function MenuItemCard({ item }: { item: MenuItem }) {
   const { addItem } = useCart();
@@ -46,17 +38,13 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
     <div className="bg-white border border-[#E5E5E5] rounded-2xl overflow-hidden flex flex-col">
       {/* Image */}
       <div className="relative w-full h-[140px] bg-[#F9F9F9]">
-        {item.image_url ? (
-          <Image
-            src={item.image_url}
-            alt={item.name}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        ) : (
-          <Initials name={item.name} />
-        )}
+        <Image
+          src={item.image_url || FALLBACK_IMAGE}
+          alt={item.name}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
         {item.featured && (
           <span className="absolute top-2 left-2 bg-[#1A1A1A] text-white text-xs font-bold px-2 py-0.5 rounded-full">
             ★ Popular

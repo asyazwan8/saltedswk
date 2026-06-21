@@ -42,19 +42,13 @@ export default async function AdminMenuPage() {
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-10 rounded-lg overflow-hidden bg-[#F9F9F9] shrink-0 flex items-center justify-center">
-                      {item.image_url ? (
-                        <Image
-                          src={item.image_url}
-                          alt={item.name}
-                          width={48}
-                          height={40}
-                          className="object-cover w-full h-full"
-                        />
-                      ) : (
-                        <span className="text-[#1A1A1A] text-xs font-bold">
-                          {item.name.split(' ').slice(0, 2).map((w) => w[0]).join('')}
-                        </span>
-                      )}
+                      <Image
+                        src={item.image_url || '/brand/restaurant.jpg'}
+                        alt={item.name}
+                        width={48}
+                        height={40}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
                     <span className="font-medium">{item.name}</span>
                   </div>
